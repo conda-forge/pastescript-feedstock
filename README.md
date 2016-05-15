@@ -5,7 +5,7 @@ Home: http://pythonpaste.org/script/
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A pluggable command-line frontend, including commands to setup package file layouts
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pastescript-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pastescript-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pastescript-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pastescript-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pastescript-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pastescript-feedstock/branch/master)
