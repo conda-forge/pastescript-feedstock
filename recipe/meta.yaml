@@ -18,6 +18,9 @@ requirements:
   host:
     - python
     - pip
+    - paste >=3
+    - pastedeploy
+    - six
   run:
     - python
     - paste >=3
