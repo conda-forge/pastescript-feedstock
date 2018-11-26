@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: pastescript
@@ -9,7 +9,7 @@ source:
   sha256: c03f249805538cc2328741ae8d262a9200ae1c993119b3d9bac4cd422cb476c0
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py3k]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
