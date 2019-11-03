@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/P/PasteScript/PasteScript-2.0.2.tar.gz
-  sha256: c03f249805538cc2328741ae8d262a9200ae1c993119b3d9bac4cd422cb476c0
+  url: https://pypi.io/packages/source/P/PasteScript/PasteScript-{{ version }}.tar.gz
+  sha256: 9b0f5c0f1c6a510a353fa7c3dc4fdaab9071462d60d24573de76a001fbc172ac
 
 build:
   number: 0
