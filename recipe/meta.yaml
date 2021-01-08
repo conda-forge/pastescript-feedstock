@@ -9,7 +9,7 @@ source:
   sha256: 9b0f5c0f1c6a510a353fa7c3dc4fdaab9071462d60d24573de76a001fbc172ac
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - paster = paste.script.command:run
