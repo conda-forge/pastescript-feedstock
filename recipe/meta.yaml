@@ -10,21 +10,23 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - paster = paste.script.command:run
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - paste >=3
     - pastedeploy
     - six
   run:
-    - python
-    - paste >=3
+    - python >=3.6
+    - paste >=3.0
     - pastedeploy
+    - setuptools
     - six
 
 test:
@@ -39,6 +41,7 @@ about:
   home: http://pythonpaste.org/script/
   license: MIT
   summary: A pluggable command-line frontend, including commands to setup package file layouts
+  license_file: docs/license.txt
 
 extra:
   recipe-maintainers:
