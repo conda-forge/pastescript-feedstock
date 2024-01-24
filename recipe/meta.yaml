@@ -1,33 +1,31 @@
+{% set name = "pastescript" %}
 {% set version = "3.4.0" %}
 
 package:
-  name: pastescript
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/P/PasteScript/PasteScript-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PasteScript-{{ version }}.tar.gz
   sha256: 9348ef065aff22cf1588c12dfb020cc751c6482e216f8a3c7512fa40a43f90dc
 
 build:
-  number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - paster = paste.script.command:run
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
-    - paste >=3
-    - pastedeploy
-    - six
   run:
-    - python >=3.6
+    - python >=3.7
     - paste >=3.0
     - pastedeploy
-    - setuptools
     - six
+    - setuptools
 
 test:
   imports:
