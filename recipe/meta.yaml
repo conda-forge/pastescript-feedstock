@@ -1,5 +1,5 @@
 {% set name = "pastescript" %}
-{% set version = "3.5.0" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PasteScript-{{ version }}.tar.gz
-  sha256: 27f8081f41daa002ac38f7569e7c71388ebc41330741e1a1d87533881ef04ee1
+  sha256: 1c22d2b7cd5351646beed28c6f70eb4a2a4b925651d9afcaa3501d06cabb5171
 
 build:
   entry_points:
