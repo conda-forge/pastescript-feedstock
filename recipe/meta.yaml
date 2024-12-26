@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PasteScript-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PasteScript-{{ version }}.tar.gz
   sha256: 1c22d2b7cd5351646beed28c6f70eb4a2a4b925651d9afcaa3501d06cabb5171
 
 build:
@@ -14,20 +14,22 @@ build:
     - paster = paste.script.command:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - paste >=3.0
     - pastedeploy
     - six
     - setuptools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - paste
     - paste.script
